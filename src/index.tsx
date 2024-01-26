@@ -4,6 +4,7 @@ import "./index.css";
 import { Canvas } from "@react-three/fiber";
 import Scene from "./components/Scene";
 import { Suspense } from "react";
+import { Perf } from "r3f-perf";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -22,6 +23,7 @@ root.render(
       }}
     >
       <Scene />
+      <Perf />
     </Canvas>
   </Suspense>
 );
