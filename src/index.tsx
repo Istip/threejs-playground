@@ -15,13 +15,16 @@ root.render(
     <Canvas
       orthographic
       camera={{
-        fov: 45,
-        near: 0.1,
+        fov: 75,
+        near: 1,
         far: 1000,
-        zoom: 120,
-        position: [0, 0, 6],
+        zoom: 100,
+        position: [4, 20, 80],
       }}
     >
+      <ambientLight intensity={2} />
+      <directionalLight position={[0, 0, 50]} intensity={1} />
+
       <Scene />
       <Perf />
     </Canvas>

@@ -1,16 +1,14 @@
-import { OrbitControls } from "@react-three/drei";
-import ZombieCar from "./Zombie";
-// import Car from "./Car";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Scene = () => {
+  const model = useGLTF("/model/barrel.glb");
+
   return (
     <>
       <OrbitControls />
 
-      <ambientLight intensity={0.2} />
-      <directionalLight intensity={1} position={[3, 3, 0]} />
-
-      <ZombieCar />
+      <OrbitControls />
+      <primitive object={model.scene} />
     </>
   );
 };
