@@ -6,8 +6,6 @@ const Scene = () => {
   return (
     <>
       <OrbitControls />
-
-      <OrbitControls />
       <primitive object={model.scene} />
     </>
   );
