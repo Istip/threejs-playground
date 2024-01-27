@@ -1,12 +1,29 @@
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
+import { useState } from "react";
 
 const Scene = () => {
-  const model = useGLTF("/model/barrel.glb");
+  const [scaleSecondMesh, setScaleSecondMesh] = useState(1);
 
   return (
     <>
       <OrbitControls />
-      <primitive object={model.scene} />
+
+      <mesh position={[1, 0, 0]} onClick={(e) => e.stopPropagation()}>
+        <boxGeometry />
+        <meshStandardMaterial color="tomato" />
+      </mesh>
+
+      <mesh
+        position={[-1, 0, 0]}
+        scale={scaleSecondMesh}
+        onClick={() => setScaleSecondMesh(scaleSecondMesh === 1 ? 2 : 1)}
+      >
+        <boxGeometry />
+        <meshStandardMaterial
+          color="orange"
+          wireframe={scaleSecondMesh === 2}
+        />
+      </mesh>
     </>
   );
 };
