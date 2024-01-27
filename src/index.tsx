@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
+import StudioExample from "./components/StudioExample";
 // import Scene from "./components/Scene";
 // import { Perf } from "r3f-perf";
 // import Box from "./components/Box";
@@ -12,22 +13,24 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <Suspense fallback={null}>
-    <Canvas
-      shadows
-      camera={{
-        fov: 75,
-        near: 1,
-        far: 100,
-        position: [1, 3, 6],
-      }}
-    >
-      {/* <Scene /> */}
-      {/* <Box /> */}
-      {/* <Perf /> */}
-      <></>
-    </Canvas>
-  </Suspense>
+  <>
+    <Suspense fallback={null}>
+      <Canvas
+        shadows
+        camera={{
+          fov: 75,
+          near: 1,
+          far: 100,
+          position: [1, 3, 6],
+        }}
+      >
+        {/* <Scene /> */}
+        {/* <Box /> */}
+        {/* <Perf /> */}
+        <StudioExample />
+      </Canvas>
+    </Suspense>
+  </>
 );
 
 reportWebVitals();
