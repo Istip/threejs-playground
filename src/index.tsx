@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
-import DreiScene from "./components/DreiScene";
 // import Scene from "./components/Scene";
 // import { Perf } from "r3f-perf";
 // import Box from "./components/Box";
@@ -26,7 +25,7 @@ root.render(
       {/* <Scene /> */}
       {/* <Box /> */}
       {/* <Perf /> */}
-      <DreiScene />
+      <></>
     </Canvas>
   </Suspense>
 );
