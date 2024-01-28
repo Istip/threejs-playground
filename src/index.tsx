@@ -3,7 +3,8 @@ import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
-import StudioExample from "./components/StudioExample";
+// import CameraTest from "./components/CameraTest";
+// import StudioExample from "./components/StudioExample";
 // import Scene from "./components/Scene";
 // import { Perf } from "r3f-perf";
 // import Box from "./components/Box";
@@ -16,7 +17,6 @@ root.render(
   <>
     <Suspense fallback={null}>
       <Canvas
-        shadows
         camera={{
           fov: 75,
           near: 1,
@@ -27,7 +27,9 @@ root.render(
         {/* <Scene /> */}
         {/* <Box /> */}
         {/* <Perf /> */}
-        <StudioExample />
+        {/* <StudioExample */}
+        {/* <CameraTest /> */}
+        <></>
       </Canvas>
     </Suspense>
   </>
