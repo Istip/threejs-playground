@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
+import ControlsComponent from "./components/Controlers/ControlsComponent";
 // import CameraTest from "./components/CameraTest";
 // import StudioExample from "./components/StudioExample";
 // import Scene from "./components/Scene";
@@ -29,7 +30,7 @@ root.render(
         {/* <Perf /> */}
         {/* <StudioExample */}
         {/* <CameraTest /> */}
-        <></>
+        <ControlsComponent />
       </Canvas>
     </Suspense>
   </>
