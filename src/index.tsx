@@ -3,7 +3,10 @@ import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
-import ControlsComponent from "./components/Controlers/ControlsComponent";
+// import ControlsComponent from "./components/Controlers/ControlsComponent";
+// import OrbitController from "./components/Controlers/OrbitController";
+// import PresentationController from "./components/Controlers/PresentationController";
+import ScrollControllers from "./components/Controlers/ScrollControllers";
 // import CameraTest from "./components/CameraTest";
 // import StudioExample from "./components/StudioExample";
 // import Scene from "./components/Scene";
@@ -20,9 +23,9 @@ root.render(
       <Canvas
         camera={{
           fov: 75,
-          near: 1,
-          far: 100,
-          position: [1, 3, 6],
+          // near: 1,
+          // far: 100,
+          position: [0, 0, 5],
         }}
       >
         {/* <Scene /> */}
@@ -30,7 +33,10 @@ root.render(
         {/* <Perf /> */}
         {/* <StudioExample */}
         {/* <CameraTest /> */}
-        <ControlsComponent />
+        {/* <ControlsComponent /> */}
+        {/* <OrbitController /> */}
+        {/* <PresentationController /> */}
+        <ScrollControllers />
       </Canvas>
     </Suspense>
   </>
