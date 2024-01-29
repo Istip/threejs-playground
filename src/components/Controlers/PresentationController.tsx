@@ -5,7 +5,7 @@ const PresentationController = () => {
     <>
       <PresentationControls
         polar={[Math.PI / 3, Math.PI / 3]}
-        azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+        azimuth={[Math.PI / 1.4, Math.PI / 2]}
         config={{ mass: 2, tenstion: 500 }}
         snap={{ mass: 4, tension: 1500 }}
       >
