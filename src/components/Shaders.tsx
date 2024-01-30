@@ -29,6 +29,11 @@ const Shaders = () => {
       hover ? 0.4 : 0,
       hover ? 0.05 : 0.01
     );
+
+    // Testing these out
+    // MESH ref object propreties achieved by consoling out ref.current
+    ref.current.scale.x = lerp(ref.current.scale.x, hover ? 1.2 : 1, 0.1);
+    ref.current.scale.y = lerp(ref.current.scale.y, hover ? 1.2 : 1, 0.1);
   });
 
   return (
