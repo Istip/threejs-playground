@@ -36,3 +36,12 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+.text > div {
+  font-family: "Inter", sans-serif;
+  padding: 15px;
+  font-weight: bolder;
+  background-color: #11111150;
+  color: #fff;
+  border-radius: 18px;
+}
