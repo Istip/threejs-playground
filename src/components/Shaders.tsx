@@ -1,14 +1,14 @@
 import * as THREE from "three";
 import {
   OrbitControls,
-  Environment,
+  // Environment,
   Float,
   GradientTexture,
   MeshDistortMaterial,
-  MeshReflectorMaterial,
-  MeshWobbleMaterial,
+  // MeshReflectorMaterial,
+  // MeshWobbleMaterial,
   useCursor,
-  useTexture,
+  // useTexture,
 } from "@react-three/drei";
 import { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
