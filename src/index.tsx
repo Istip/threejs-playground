@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
+import Texts from "./components/Texts";
 // import TransformControllers from "./components/Controlers/TransformControllers";
 // import ControlsComponent from "./components/Controlers/ControlsComponent";
 // import OrbitController from "./components/Controlers/OrbitController";
@@ -52,7 +53,7 @@ root.render(
         {/* <PresentationController /> */}
         {/* <ScrollControllers /> */}
         {/* <TransformControllers /> */}
-        <></>
+        <Texts />
       </Canvas>
     </Suspense>
   </>
