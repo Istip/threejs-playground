@@ -4,7 +4,6 @@ import {
   Float,
   Html,
   OrbitControls,
-  Outlines,
   Text,
 } from "@react-three/drei";
 import { useRef, useState } from "react";
@@ -12,6 +11,7 @@ import { useRef, useState } from "react";
 const Texts = () => {
   const ref = useRef(null);
   const [clicked, setClicked] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   return (
     <>
@@ -50,25 +50,28 @@ const Texts = () => {
           ref={ref}
           onPointerDown={() => setClicked(!clicked)}
           scale={clicked ? 0.7 : 1}
+          onPointerEnter={() => setShowButton(true)}
+          onPointerLeave={() => setShowButton(false)}
         >
           <dodecahedronGeometry />
           <meshStandardMaterial color="orange" />
 
-          <Html
-            position={[-0.7, 0.75, 0.5]}
-            wrapperClass="text"
-            distanceFactor={5}
-            // hide behind other objects
-            occlude={[ref]}
-            style={{
-              cursor: "pointer",
-              textAlign: "center",
-              userSelect: "none",
-            }}
-          >
-            Click below
-          </Html>
-          {clicked && <Outlines />}
+          {showButton && (
+            <Html
+              position={[-0.7, 0.75, 0.5]}
+              wrapperClass="text"
+              distanceFactor={5}
+              // hide behind other objects
+              occlude={[ref]}
+              style={{
+                cursor: "pointer",
+                textAlign: "center",
+                userSelect: "none",
+              }}
+            >
+              Click below
+            </Html>
+          )}
         </mesh>
 
         <mesh position={[-1.75, 0, -1]} rotation={[-3, -5, 8]}>
