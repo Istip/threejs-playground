@@ -3,7 +3,10 @@ import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
-import Shaders from "./components/Shaders";
+// import PortalExample from "./components/PortalExample";
+// import SpringBox from "./components/Spring/SpringBox";
+// import SpringPropsTest from "./components/Spring/SpringPropsTest";
+// import Shaders from "./components/Shaders";
 // import Texts from "./components/Texts";
 // import TransformControllers from "./components/Controlers/TransformControllers";
 // import ControlsComponent from "./components/Controlers/ControlsComponent";
@@ -15,6 +18,8 @@ import Shaders from "./components/Shaders";
 // import Scene from "./components/Scene";
 // import { Perf } from "r3f-perf";
 // import Box from "./components/Box";
+// import MultipleSprings from "./components/Spring/MultipleSprings";
+import TrailDemo from "./components/Spring/TrailDemo";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -54,8 +59,12 @@ root.render(
         {/* <ScrollControllers /> */}
         {/* <TransformControllers /> */}
         {/* <Texts /> */}
-
-        <Shaders />
+        {/* <Shaders /> */}
+        {/* <PortalExample /> */}
+        {/* <SpringBox /> */}
+        {/* <SpringPropsTest /> */}
+        {/* <MultipleSprings /> */}
+        <TrailDemo />
       </Canvas>
     </Suspense>
   </>
