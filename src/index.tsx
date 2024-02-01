@@ -19,7 +19,9 @@ import { Canvas } from "@react-three/fiber";
 // import { Perf } from "r3f-perf";
 // import Box from "./components/Box";
 // import MultipleSprings from "./components/Spring/MultipleSprings";
-import TrailDemo from "./components/Spring/TrailDemo";
+// import TrailDemo from "./components/Spring/TrailDemo";
+// import PhysicsScene from "./components/Rapier/PhysicsScene";
+import ForcePhysics from "./components/Rapier/ForcePhysics";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -41,11 +43,13 @@ root.render(
   <>
     <Suspense fallback={null}>
       <Canvas
+        // shadows only visible when passed in the Canvas component
+        shadows
         camera={{
           fov: 45,
           near: 0.1,
           far: 100,
-          position: [0, 2, 7],
+          position: [0, 1, -10],
         }}
       >
         {/* <Scene /> */}
@@ -64,7 +68,9 @@ root.render(
         {/* <SpringBox /> */}
         {/* <SpringPropsTest /> */}
         {/* <MultipleSprings /> */}
-        <TrailDemo />
+        {/* <TrailDemo /> */}
+        {/* <PhysicsScene /> */}
+        <ForcePhysics />
       </Canvas>
     </Suspense>
   </>
