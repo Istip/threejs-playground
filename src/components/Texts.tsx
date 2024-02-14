@@ -26,13 +26,13 @@ const Texts = () => {
           scale={2}
           fontSize={0.4}
           font="/fonts/rethink-bold.ttf"
-          color="black"
+          color="#ffffff"
           maxWidth={1.5}
           textAlign="center"
           lineHeight={0.75}
           letterSpacing={-0.05}
         >
-          hello world
+          novanoir
           <meshStandardMaterial side={THREE.DoubleSide} />
         </Text>
       </Float>
@@ -40,7 +40,7 @@ const Texts = () => {
       <Float floatIntensity={4} speed={1}>
         <mesh scale={1.5} position={[0.5, 0.5, -0.5]}>
           <planeGeometry />
-          <meshStandardMaterial side={THREE.DoubleSide} />
+          <meshStandardMaterial side={THREE.DoubleSide} color="red" />
         </mesh>
       </Float>
 
