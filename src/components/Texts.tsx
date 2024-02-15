@@ -3,6 +3,7 @@ import {
   CameraControls,
   Float,
   Html,
+  Image,
   OrbitControls,
   Text,
 } from "@react-three/drei";
@@ -32,11 +33,14 @@ const Texts = () => {
           lineHeight={0.75}
           letterSpacing={-0.05}
         >
-          novanoir
+          hello world!
           <meshStandardMaterial side={THREE.DoubleSide} />
         </Text>
       </Float>
 
+      <Float floatIntensity={2} speed={0.2}>
+        <Image url="/images/bg.jpg" position={[0, 0, -2.5]} scale={10} />
+      </Float>
       <Float floatIntensity={4} speed={1}>
         <mesh scale={1.5} position={[0.5, 0.5, -0.5]}>
           <planeGeometry />
