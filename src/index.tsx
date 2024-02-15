@@ -3,11 +3,12 @@ import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
+import GlassTest from "./components/GlassTest";
 // import PortalExample from "./components/PortalExample";
 // import SpringBox from "./components/Spring/SpringBox";
 // import SpringPropsTest from "./components/Spring/SpringPropsTest";
 // import Shaders from "./components/Shaders";
-// import Texts from "./components/Texts";
+import Texts from "./components/Texts";
 // import TransformControllers from "./components/Controlers/TransformControllers";
 // import ControlsComponent from "./components/Controlers/ControlsComponent";
 // import OrbitController from "./components/Controlers/OrbitController";
@@ -21,7 +22,7 @@ import { Canvas } from "@react-three/fiber";
 // import MultipleSprings from "./components/Spring/MultipleSprings";
 // import TrailDemo from "./components/Spring/TrailDemo";
 // import PhysicsScene from "./components/Rapier/PhysicsScene";
-import ForcePhysics from "./components/Rapier/ForcePhysics";
+// import ForcePhysics from "./components/Rapier/ForcePhysics";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -39,39 +40,66 @@ const transformControlCameraSetup = {
   fov: 75,
 } as any;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Render = () => (
+  <Canvas
+    // shadows only visible when passed in the Canvas component
+    orthographic
+    camera={{
+      fov: 75,
+      near: 0.1,
+      far: 1000,
+      position: [0, 0, 5],
+      zoom: 100,
+    }}
+  >
+    {/* <Scene /> */}
+    {/* <Box /> */}
+    {/* <Perf /> */}
+    {/* <StudioExample */}
+    {/* <CameraTest /> */}
+    {/* <ControlsComponent /> */}
+    {/* <OrbitController /> */}
+    {/* <PresentationController /> */}
+    {/* <ScrollControllers /> */}
+    {/* <TransformControllers /> */}
+    <Texts />
+    {/* <Shaders /> */}
+    {/* <PortalExample /> */}
+    {/* <SpringBox /> */}
+    {/* <SpringPropsTest /> */}
+    {/* <MultipleSprings /> */}
+    {/* <TrailDemo /> */}
+    {/* <PhysicsScene /> */}
+    {/* <ForcePhysics /> */}
+    {/* <GlassTest /> */}
+  </Canvas>
+);
+
 root.render(
   <>
     <Suspense fallback={null}>
-      <Canvas
-        // shadows only visible when passed in the Canvas component
-        shadows
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 100,
-          position: [0, 1, -10],
+      {/* <Render /> */}
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          position: "absolute",
         }}
       >
-        {/* <Scene /> */}
-        {/* <Box /> */}
-        {/* <Perf /> */}
-        {/* <StudioExample */}
-        {/* <CameraTest /> */}
-        {/* <ControlsComponent /> */}
-        {/* <OrbitController /> */}
-        {/* <PresentationController /> */}
-        {/* <ScrollControllers /> */}
-        {/* <TransformControllers /> */}
-        {/* <Texts /> */}
-        {/* <Shaders /> */}
-        {/* <PortalExample /> */}
-        {/* <SpringBox /> */}
-        {/* <SpringPropsTest /> */}
-        {/* <MultipleSprings /> */}
-        {/* <TrailDemo /> */}
-        {/* <PhysicsScene /> */}
-        <ForcePhysics />
-      </Canvas>
+        <Canvas
+          orthographic
+          camera={{
+            fov: 75,
+            near: 0.1,
+            far: 50,
+            position: [0, 0, 6],
+            zoom: 200,
+          }}
+        >
+          <GlassTest />
+        </Canvas>
+      </div>
     </Suspense>
   </>
 );
